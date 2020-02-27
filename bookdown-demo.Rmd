@@ -1,0 +1,254 @@
+--- 
+title: "橙色工作假期"
+author: "橙色香港人"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+---
+
+# 前言
+
+2019年，
+<br>
+香港發生好多事既一年，
+<br>
+香港人難以遺忘既一年，
+<br>
+亦都係香港同荷蘭開托工作假期計劃既第一年。
+
+我地係第一班黎到荷蘭工作假期既香港人，
+<br>
+所以希望整理一下所見所聞。
+<br>
+
+
+```{r eval=FALSE, include = FALSE}
+install.packages("bookdown")
+# or the development version
+# devtools::install_github("rstudio/bookdown")
+```
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+
+<!--chapter:end:index.Rmd-->
+
+# 出發前 {#intro}
+
+You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+
+Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+
+```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+
+Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+
+```{r nice-tab, tidy=FALSE}
+knitr::kable(
+  head(iris, 20), caption = 'Here is a nice table!',
+  booktabs = TRUE
+)
+```
+
+
+
+<!--chapter:end:01-intro.Rmd-->
+
+# Settle down
+
+## Residence Permit（Verblijfstitel）荷蘭外國人身份証
+Residence Permit即係身份證，你出街都一定要帶，所以入境後就盡快去拎啦！小編就係出發前就上網預約定，到步後就無咁徬徨啦！
+
+## BSN（Burgerservicenummer）好似美國既social security number
+BSN係Citizen service number，作用就好似稅號咁，基本上你無BSN，你係咩都做唔到架！開唔到銀行戶口，申請唔到荷蘭保險，更加無可能返工！所以係非常非常非常重要！
+<br>
+
+小編試過預約係1-3個月不等，嚇餐死囉！建議你未出發前就預約定！如果真係咁不幸預約唔到，每日一早上佢個網，有時佢會即日放返d空位，有就即刻預約飛過去！
+<br>
+
+要留意返荷蘭係有唔同既行政區（Gemeente），要睇返你register既地址，而決定去邊間Gemeente～每個Gemeente既手續同埋準備文件都唔同，記得睇清楚呀～
+<br>
+以Rotterdam一帶為例，Schiedam就係要去番Schiedam register
+<br>
+
+小編搵幾個Gemeente既網址俾大家參考下
+<br>
+
+1. [Gemeente Rotterdam](https://concern.ir.rotterdam.nl/afspraak/maken?1)
+<br>
+2. [Gemeente Amsterdam](https://www.amsterdam.nl/)
+<br>
+3. [Gemeente Den Haag](https://www.denhaag.nl/nl.htm)
+<br>
+4. [Gemeente Delft](https://www.delft.nl/)
+<br>
+5. [Gemeente Utrecht](https://www.utrecht.nl/)
+<br>
+
+## 銀行
+
+黎到荷蘭，梗係要開番個户口，出糧，過錢又好。
+<br>
+因為荷蘭用卡俾錢多，debit card，5係credit card，留意番。
+<br>
+
+### 傳統銀行
+
+暫時小編們都淨係用過以下兩間傳統銀行，而依兩間都係荷蘭十大銀行，比較support國際客户，留意返荷蘭銀行都會收每月行政費。
+<br>
+
+開户需知：通常要提供[BSN][BSN（Burgerservicenummer）好似美國既social security number], [residence permit][Residence Permit（Verblijfstitel）荷蘭外國人身份証] 同埋住址証明，同埋普遍要make appointment。雖然都有小編試過walk-in，有人得，有人5得，撞手神。
+<br>
+
+小知識：依兩間銀行正名5係用英文字母發音，同荷蘭人溝通要用番荷蘭文字母發音佢地先會明你地講咩嫁～
+<br>
+
+### Fintech/mobile bank
+#### [Bunq]((https://www.bunq.com/))
+如果咁不幸未申請到BSN, 又或者未搵到屋又想開bank account，可以試下用Bunq，有幾位小編都係到步用Bunq後黎再轉ING。不過Bunq月費都比傳統銀行貴，但係係香港用transferwise匯錢去bunq account，手績費係比其他銀行平，用户體驗詳情可以睇小編既blog～
+<br>
+
+#### [Transferwise](https://transferwise.com/nl)
+荷蘭銀行debit卡(包括Bunq在內)普遍都係Maestro／Vpay，如果去旅行(e.g. 英國)想搵番張mastercard debit卡傍身，可以考慮下申請張transferwise卡，放€20落去transferwise account就可以免費申請張卡。另外，transferwise都係可以用黎匯錢來往香港荷蘭，匯率通常都幾5錯。
+
+#### [Revolut](https://www.revolut.com/en-NL?p=branded_campaign&gclid=Cj0KCQiA4sjyBRC5ARIsAEHsELHA6Na1S6Bb1kJwsYfTuIitNj75Ly60Iw_K0-kXPQkwI-jMF7EweO4aAmlgEALw_wcB/)
+Revolut基本上同transferwise分別5大，都可以trans錢來回香港荷蘭，張卡就係VISA。Revolut會比[transferwise][[Transferwise](https://transferwise.com/nl)]多少少product，例如可以玩埋cryptocurrency。申請張卡5駛錢但要俾delivery fee (~€6)。不過revolut成日都有promotion，留意下就可以運費都5駛俾。
+<br>
+<br>
+Revolut開户要求：要有[residence permit][Residence Permit（Verblijfstitel）荷蘭外國人身份証]
+
+## 保險
+### 健康保險（Zorgverzekering）
+任何人只要係荷蘭居住或者工作，4個月內一定要買最基本既健康保險。呢度係用墊底費去計算個保費，可以揀最低€385至最高€885。以€385就例，只有今年claim夠€385，之後保險就會cover該年度既餘額，所以最多都係俾€385。
+<br>
+
+有人都會選擇係香港買working holiday保險，但係小編就未證實到荷蘭承唔承認，建議將保險既policy send俾荷蘭政府，書面確認，咁就包無損失啦！
+<br>
+
+嗱嗱嗱！好多人都心諗可唔可以偷雞唔買保險，小編就唔建議啦！因為一旦俾荷蘭政府發現，有機會俾人罰錢，另外如果香港買既保險或者根本無保險既話，你係需要自己俾返哂係荷蘭既任何醫療費用，到時就得不償失啦！
+<br>
+
+小編都明白健康保險都唔平既，可以參考返「健康保險津貼」，睇下點樣可以幫補下啦～
+<br>
+<br>
+參考網站：
+<br>
+1. [政府網頁](https://www.government.nl/topics/health-insurance)
+<br>
+2. [IamExpat有關health insurance資訊](https://www.iamexpat.nl/expat-info/insurances-netherlands/dutch-health-insurance)
+<br>
+3. [保險格價網Independer](https://www.independer.nl/)
+<br>
+4. [保險格價網Zorgwijzer](https://www.zorgwijzer.nl/)
+<br>
+
+## 津貼
+
+荷蘭既稅務局（Belastingdienst）提供唔同既津貼，而當中大家可以留意健康保險津貼（Zorgtoeslag）同埋房屋津貼（Huurtoeslag），你只需要係佢個網做一個Test，就知道自己有無得claim同埋claim到幾錢！
+
+### 健康保險津貼（Zorgtoeslag)
+只係符合資格，大家都可以係網上面申請健康保險津貼架～
+<br>
+<br>
+資格：
+<br>
+1.	18歲或以上（申請得WHP都夠秤架啦～）
+<br>
+2.	持有有效既荷蘭residence permit
+<br>
+3.	持有荷蘭既健康保險
+<br>
+4.	入息限制（2020年全年入息上限係€ 30,481）
+<br>
+5.	資產限制（2020年上限係€ 116,613） 
+<br>
+<br>
+呢個係荷蘭既稅務局，申請資格以佢為準，津貼可以上佢個[網](https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/toeslagen/zorgtoeslag//)直接申請！
+<br>
+[IamExpat有關津貼資訊](https://www.iamexpat.nl/expat-info/allowances-benefits-netherlands/healthcare-allowance)
+
+### 房屋津貼（Huurtoeslag）
+只係符合資格，大家都可以係網上面申請房屋津貼架～
+<br>
+<br>
+資格：
+<br>
+1.	18歲或以上（申請得ＷＨＰ都夠秤架啦～）
+<br>
+2.	持有有效既荷蘭residence permit
+<br>
+3.	持有可註冊既租約
+<br>
+4.	必須係住係獨立既生活空間（獨立廁廚）
+<br>
+5.	租金限制（2020年23歲或以上既每月租金上限係€ 737.14）
+<br>
+6.	資產限制（2020年上限係€ 30,846）
+<br>
+<br>
+
+呢個係荷蘭既稅務局，申請資格以佢為準，津貼可以上佢個[網](https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/toeslagen/huurtoeslag/)直接申請！
+<br>
+[IamExpat有關津貼資訊](https://www.iamexpat.nl/expat-info/allowances-benefits-netherlands/rent-allowance-huurtoeslag)
+
+<br>
+
+## 電話卡
+荷蘭電話公司有好多，可以自己慢慢揀，一舨黎講就大約€10-€15一個月。
+<br>
+
+1. [LEBARA 平 冇customer sevice](https://mobile.lebara.com/nl)
+<br>
+2. [KPN 最少簽一年](https://www.kpn.com/)
+<br>
+3. [T-mobile 最少簽一年](https://www.t-mobile.nl/)
+<br>
+4. [Vodafone 最少簽一年](https://www.vodafone.nl/)
+<br>
+5. [Tele2](https://www.tele2.nl/)
+
+
+<!--chapter:end:02-before.Rmd-->
+
+# 交通
+
+We describe our methods in this chapter.
+
+<!--chapter:end:03-settle.Rmd-->
+
+# Applications
+
+Some _significant_ applications are demonstrated in this chapter.
+
+## Example one
+
+## Example two
+
+<!--chapter:end:04-traffic.Rmd-->
+
+# Final Words
+
+We have finished a nice book.
+
+<!--chapter:end:05-shopping.Rmd-->
+
+`r if (knitr:::is_html_output()) '
+# References {-}
+'`
+
+<!--chapter:end:06-job.Rmd-->
+
